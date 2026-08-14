@@ -64,3 +64,15 @@ that value as the next request's `cursor` query parameter.
 `GET /health` is a process liveness check. `GET /ready` checks PostgreSQL and is
 intended for load balancers and orchestrators. Authentication and distributed
 rate limiting should also be enforced at the deployment gateway.
+
+## TypeScript SDK
+
+The dependency-free TypeScript client is in [`sdk/typescript`](sdk/typescript).
+It supports ingestion, idempotency keys, filtered listing, cursor iteration,
+health checks, and typed API errors.
+
+## Go SDK
+
+The dependency-free Go client is in [`sdk/go`](sdk/go). It provides
+context-aware requests, typed timestamps and errors, idempotent ingestion,
+cursor iteration, and generic payload decoding.
